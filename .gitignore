@@ -1,3 +1,7 @@
+# 依存パッケージ
+node_modules/
+
+# 環境変数・秘密情報（.env.example だけは共有用に残す）
 .env
 .env.*
 !.env.example

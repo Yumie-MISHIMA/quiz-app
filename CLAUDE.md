@@ -40,3 +40,7 @@
 - 秘密情報は値をこのファイルにも書かない。変数名だけを書き、値は `.env.example` に
   プレースホルダとして置く。
 - API キー・トークン・パスワードをソースにハードコードしない。
+
+## GitHubリポジトリ
+
+https://github.com/Yumie-MISHIMA/quiz-app
