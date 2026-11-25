@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>世界の文化クイズ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1 class="title">世界の文化クイズ</h1>
+
+    <!-- 出題画面 -->
+    <section id="quiz-screen" class="card">
+      <p id="progress" class="progress"></p>
+      <h2 id="question" class="question"></h2>
+      <div id="choices" class="choices"></div>
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+      <button id="next-btn" class="btn btn-primary hidden" type="button">次の問題へ</button>
+    </section>
+
+    <!-- 結果画面 -->
+    <section id="result-screen" class="card hidden">
+      <h2 class="result-title">結果発表</h2>
+      <p id="score" class="score"></p>
+      <p id="result-message" class="result-message"></p>
+      <button id="retry-btn" class="btn btn-primary" type="button">もう一度挑戦する</button>
+    </section>
+  </main>
+
+  <footer class="credit">
+    効果音：<a href="https://otologic.jp" target="_blank" rel="noopener noreferrer">OtoLogic</a>
+    （<a href="https://creativecommons.org/licenses/by/4.0/deed.ja" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>）
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

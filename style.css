@@ -1,0 +1,168 @@
+/* 青系の配色はここで一元管理する */
+:root {
+  --blue-900: #0d3b66;
+  --blue-700: #1d5fa8;
+  --blue-500: #3a86d4;
+  --blue-100: #e3effb;
+  --blue-50: #f3f8fd;
+  --correct: #2e8b57;
+  --correct-bg: #e6f4ec;
+  --wrong: #c0392b;
+  --wrong-bg: #fbeaea;
+  --text: #1f2d3d;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--blue-100), var(--blue-50));
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.title {
+  text-align: center;
+  color: var(--blue-900);
+  font-size: 1.8rem;
+  margin: 0 0 24px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(13, 59, 102, 0.12);
+}
+
+.progress {
+  margin: 0 0 8px;
+  color: var(--blue-700);
+  font-weight: bold;
+}
+
+.question {
+  margin: 0 0 20px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.choices {
+  display: grid;
+  gap: 12px;
+}
+
+.choice {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1rem;
+  text-align: left;
+  color: var(--blue-900);
+  background: var(--blue-50);
+  border: 2px solid var(--blue-100);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.choice:hover:not(:disabled) {
+  background: var(--blue-100);
+  border-color: var(--blue-500);
+}
+
+.choice:disabled {
+  cursor: default;
+}
+
+.choice.correct {
+  background: var(--correct-bg);
+  border-color: var(--correct);
+  color: var(--correct);
+  font-weight: bold;
+}
+
+.choice.wrong {
+  background: var(--wrong-bg);
+  border-color: var(--wrong);
+  color: var(--wrong);
+}
+
+.feedback {
+  min-height: 1.5em;
+  margin: 20px 0 0;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+.feedback.is-correct {
+  color: var(--correct);
+}
+
+.feedback.is-wrong {
+  color: var(--wrong);
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: var(--white);
+  background: var(--blue-700);
+}
+
+.btn-primary:hover {
+  background: var(--blue-900);
+}
+
+.result-title {
+  margin: 0;
+  text-align: center;
+  color: var(--blue-900);
+}
+
+.score {
+  margin: 16px 0 8px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--blue-700);
+}
+
+.result-message {
+  margin: 0;
+  text-align: center;
+}
+
+.credit {
+  padding: 0 16px 24px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--blue-700);
+}
+
+.credit a {
+  color: var(--blue-700);
+}
+
+.hidden {
+  display: none;
+}
